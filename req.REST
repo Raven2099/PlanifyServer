@@ -1,16 +1,22 @@
-POST http://localhost:5500/api/item 
+POST http://localhost:5500/api/item
 Content-Type: application/json
 
 {
-"item": "Task 3",
+"item": "Task 2",
+"createdDate": "2023-11-08",
 "date": "2023-11-09",
-"completed": "false",
- "priority" : "low"
+"priority" : "low",
+"completed": false,
+"notes": "asdasd",
+"category": "Work",
+"notification": 0,
+"userEmail": "test@example.com"
 }
+
 
 ###
 
-GET http://localhost:5500/api/items 
+GET http://localhost:5500/api/user/test@example.com/tasks
 Content-Type: application/json
 
 
