@@ -48,7 +48,8 @@ router.get('/api/user/:userEmail/tasks', async (req, res) => {
 
     res.status(200).json(userTasks);
   } catch (err) {
-    res.status(500).json({ message: 'Error fetching user tasks', error: err });
+    console.error('Error fetching user tasks:', err);
+  res.status(500).json({ message: 'Error fetching user tasks', error: err });
   }
 });
 
